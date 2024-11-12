@@ -1,0 +1,12 @@
+@import url("./utilities.css");
+
+@import url("./form.css");
+
+@import url("./account-access.css");
+
+@import url("./painel.css");
+
+@import url("./personal-information.css");
+
+/*Import do css sweetalert*/
+@import url("../node_modules/sweetalert2/dist/sweetalert2.min.css");

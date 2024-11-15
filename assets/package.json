@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "sweetalert2": "^11.14.3",
-    "type": "module"
-  }
-}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>FinanceIQ</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <section id="accountContentId" class="user-login-content">
+        <div id="image-login" class="content-img-account-access">
+          <!-- <img src="../src/img/access-account.svg" alt="acessar conta" /> -->
+        </div>
+        <div class="content-information-account-access">
+          <form id="formLoginId" method="POST" class="scroll">
+            <div class="content-information">
+              <div class="form-group">
+                <div class="login-title">
+                  <h1>Entrar<span>.</span></h1>
+                </div>
+              </div>
+
+              <div class="account-information">
+                <div class="form-group">
+                  <label for="txtEmailLogin" class="control-label account"
+                    >Email:</label
+                  >
+                  <div class="content-field">
+                    <input
+                      type="email"
+                      placeholder="usuario@gmail.com"
+                      id="txtEmailLogin"
+                      name="txtEmailLogin"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="txtPasswordLogin" class="control-label account"
+                    >Senha:</label
+                  >
+                  <div class="content-field">
+                    <input
+                      type="password"
+                      id="txtPasswordLogin"
+                      name="txtPasswordLogin"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="button-container">
+                  <div class="form-group">
+                    <input id="btnLogin" value="Fazer login" type="submit" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-create-account">
+              <span
+                >Não é membro?<a
+                  id="tabContentCreateAccount"
+                  href="#createAccountId"
+                >
+                  Crie uma conta</a
+                ></span
+              >
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="createAccountId" class="user-registration-content hidden">
+        <div class="content-information-account-access create">
+          <form id="formCreateAccountId" method="POST" class="scroll">
+            <div class="content-information">
+              <div class="form-group">
+                <div class="login-title">
+                  <h1>Crie sua conta<span>.</span></h1>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="txtCreateName" class="control-label account"
+                  >Nome:</label
+                >
+                <div class="content-field">
+                  <input
+                    type="text"
+                    placeholder="Nome"
+                    id="txtCreateName"
+                    name="txtCreateName"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="txtCreateEmail" class="control-label account"
+                  >Email:</label
+                >
+                <div class="content-field">
+                  <input
+                    type="email"
+                    placeholder="usuario@gmail.com"
+                    id="txtCreateEmail"
+                    name="txtCreateEmail"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="txtCreatePassword" class="control-label account"
+                  >Senha:</label
+                >
+                <div class="content-field">
+                  <input
+                    type="password"
+                    id="txtCreatePassword"
+                    name="txtCreatePassword"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="button-container">
+                <div class="form-group">
+                  <input
+                    id="btnCreateAccount"
+                    value="Criar conta"
+                    type="submit"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="content-create-account">
+              <span
+                >Já é membro?<a id="tabAccountAccess" href="#accountContentId">
+                  Acesse sua conta</a
+                ></span
+              >
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

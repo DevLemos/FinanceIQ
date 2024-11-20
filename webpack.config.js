@@ -3,10 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: "./src/js/script.js",
+  entry: {
+    login: "./src/js/login.js",
+    painel: "./src/js/painel.js",
+  },
+  // "./src/js/script.js",
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "./dist"),
+    filename: "[name].js",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
   },
   mode: "development",
@@ -31,14 +35,29 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html", // Template do seu HTML
       filename: "index.html",
+      chunks: ["login"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/painel.html", // Template do seu HTML
+      filename: "painel.html",
+      chunks: ["painel"],
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: "[name].css",
     }),
   ],
   devServer: {
     static: path.resolve(__dirname, "dist"), // Serve os arquivos da pasta dist
     open: true, // Abre automaticamente o navegador
     hot: true, // Habilita o Hot Module Replacement (HMR)
+    port: 3000, // Porta do Webpack Dev Server
+    proxy: [
+      {
+        context: ["/backend"], // Rota ou conjunto de rotas para interceptar
+        target: "http://localhost/xampp/FinanceIQ", // URL para redirecionar
+        changeOrigin: true, // Permitir que o cabeçalho "Host" seja alterado
+        secure: false, // Permitir conexões inseguras (se necessário)
+      },
+    ],
   },
 };
